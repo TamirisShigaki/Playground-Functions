@@ -17,20 +17,23 @@ function splitSentence(frase) {
   return frase.split(' ');
 }
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName (array) {
+  let primeriaArray = array[0];
+  let ultimaArray = array[array.length -1];
+  let concatenacao = ultimaArray + ", " + primeriaArray
+  return (concatenacao)
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultado = wins * 3 + ties;
+  return (resultado)
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
 }
 
 // Desafio 7
