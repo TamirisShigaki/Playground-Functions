@@ -1,6 +1,2 @@
-function footballPoints(wins, ties) {
-  if (wins === 3 && ties === 1 ) {
-  return (wins*3, ties*1)
-  }
-}
-console.log (footballPoints(14,8))
+
+console.log (highestCount([9, 1, 2, 3, 9, 5, 7]));
