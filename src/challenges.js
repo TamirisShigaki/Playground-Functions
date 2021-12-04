@@ -78,19 +78,48 @@ function fizzBuzz(array) {
       arrayString.push ("fizz");
     } else if (array[i] % 5 === 0) {
       arrayString.push ("buzz");
-      } else if (array[i] % 3 !== 1 || array[i] % 5 !== 10) {
+    } else if (array[i] % 3 !== 1 || array[i] % 5 !== 1) {
         arrayString.push ("bug!");
-      }
     }
-    return arrayString;
   }
+    return arrayString;
+}
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  for (let i = 0; i < frase.length; i +=1) {
+    switch (frase[i]) {
+      case "a":
+        frase = frase.replace ('a', 1);
+      case "e":
+        frase = frase.replace ('e', 2);
+      case "i":
+        frase = frase.replace ('i', 3);
+      case "o":
+        frase = frase.replace ('o', 4);
+      case "u":
+        frase = frase.replace ('u', 5);
+    }
+  }
+  return frase
 }
-function decode() {
-  // seu código aquindhn
+
+function decode(frase) {
+  for (let i = 0; i < frase.length; i +=1) {
+    switch (frase[i]) {
+      case "1":
+        frase = frase.replace (1, 'a');
+      case "2":
+        frase = frase.replace (2, 'e');
+      case "3":
+        frase = frase.replace (3, 'i');
+      case "4":
+        frase = frase.replace (4, 'o');
+      case "5":
+        frase = frase.replace (5, 'u');
+    }
+  }
+  return frase
 }
 
 module.exports = {
