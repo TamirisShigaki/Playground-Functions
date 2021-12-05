@@ -35,12 +35,32 @@ function generatePhoneNumber(array) {
   return numTel
 }
 
-console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let resultado = null;
+
+  if ( lineA > lineB + lineC) {
+    resultado = false
+  } else if ( lineB > lineA + lineC) {
+    resultado = false
+  } else if ( lineC > lineA + lineB) {
+    resultado = false
+  } else {
+    resultado = true
+  }
+
+  if (lineA < Math.abs(lineB - lineC)) {
+    resultado = false
+  } else if ( lineB < Math.abs(lineA - lineC)) {
+    resultado = false
+  } else if ( lineC < Math.abs(lineA - lineB)) {
+    resultado = false
+  } else {
+    resultado = true
+  }
+  return resultado;
 }
+console.log (triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(string) {
