@@ -63,8 +63,18 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log (triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate(string) {
+function hydrate(frase) {
+  let quantNum = frase.match(/\d+/g); // O .match verifica a string; (/\d+/g) deixa apenas os números da string; e o "g" faz o loop funcionar.
+  let quantAgua = 0;
   
+  for (let i of quantNum) {
+      quantAgua += parseInt(i) //pega o num inteiro
+  }
+  if (quantAgua === 1) {
+    return quantAgua + " copo de água";
+  } else if (quantAgua > 1) {
+    return quantAgua + ' copos de água';
+  }
 }
 
 module.exports = {
